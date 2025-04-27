@@ -18,12 +18,12 @@
     <ClCompile Include="src\Main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\printLetters.c">
+    <ClCompile Include="src\functions\printLetters.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\printLetters.h">
+    <ClInclude Include="src\headers\printLetters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
