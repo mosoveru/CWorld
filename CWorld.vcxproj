@@ -20,6 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.c" />
+    <ClCompile Include="src\printLetters.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\printLetters.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
