@@ -3,6 +3,9 @@
 #include <fcntl.h>
 #define EnglishAlphabetLength 26
 
+void printLowercaseEnglishLettersHistogram(int letters[]);
+void printUppercaseEnglishLettersHistogram(int letters[]);
+
 main()
 {
 	_setmode(_fileno(stdout), _O_U16TEXT);
@@ -19,19 +22,28 @@ main()
 			numberOfUppercaseEnglishLetters[c - L'A']++;
 		}
 	}
+	printLowercaseEnglishLettersHistogram(numberOfLowercaseEnglishLetters);
+	printUppercaseEnglishLettersHistogram(numberOfUppercaseEnglishLetters);
+	return 0;
+}
+
+void printLowercaseEnglishLettersHistogram(int letters[]) {
 	for (int i = 0; i < EnglishAlphabetLength; i++) {
 		wprintf(L"%c - ", L'a' + i);
-		while (numberOfLowercaseEnglishLetters[i] > 0) {
+		while (letters[i] > 0) {
 			wprintf(L"0");
-			numberOfLowercaseEnglishLetters[i]--;
+			letters[i]--;
 		}
 		wprintf(L"\n");
 	}
+}
+
+void printUppercaseEnglishLettersHistogram(int letters[]) {
 	for (int i = 0; i < EnglishAlphabetLength; i++) {
 		wprintf(L"%c - ", L'A' + i);
-		while (numberOfUppercaseEnglishLetters[i] > 0) {
+		while (letters[i] > 0) {
 			wprintf(L"0");
-			numberOfUppercaseEnglishLetters[i]--;
+			letters[i]--;
 		}
 		wprintf(L"\n");
 	}
